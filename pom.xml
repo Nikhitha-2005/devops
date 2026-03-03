@@ -12,8 +12,8 @@
         <maven.compiler.source>25</maven.compiler.source>
         <maven.compiler.target>25</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
+<dependencies>
     <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
@@ -28,6 +28,7 @@
         <version>7.12.0</version>
         <scope>test</scope>
     </dependency>
+</dependencies>
     <build>
         <plugins>
             <plugin>
@@ -45,15 +46,17 @@
 /docs folder -->
                     <resources>
                         <resource>
-                            <directory>src/main/resources</directory> <includes>
-                            <include>**/*</include> <!-- Copy all files in src/main/resources --> </includes>
+                            <include>
+                            <directory>src/main/resources</directory>
+                            <include>**/*</include> <!-- Copy all files in src/main/resources -->
+                            </includes>
                         </resource>
                     </resources>
-                </configuration>
-            </execution>
-            </executions>
+                 </configuration>
+              </execution>
+                </executions>
         </plugin>
     </plugins>
 </build>
-
-        </project>
+    </properties>
+</project>
